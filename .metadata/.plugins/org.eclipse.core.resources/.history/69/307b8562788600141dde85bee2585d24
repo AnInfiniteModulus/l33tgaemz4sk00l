@@ -1,0 +1,20 @@
+package common.l33tGaem.graphics;
+
+import java.awt.Dimension;
+
+import javax.swing.JPanel;
+
+public class GaemPanel extends JPanel{ 
+	
+	private static final long serialVersionUID = -3942786010224719556L;
+
+	public GaemPanel(int height, int width, int scale ) {
+		super();
+		setPreferredSize(new Dimension(height * scale, width * scale));
+		setFocusable(true);
+		requestFocus();
+		
+	}
+
+	
+}

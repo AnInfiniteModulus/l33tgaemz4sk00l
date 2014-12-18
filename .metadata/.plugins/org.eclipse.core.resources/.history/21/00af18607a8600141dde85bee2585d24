@@ -1,0 +1,48 @@
+package common.l33tGaem.init;
+
+import javax.swing.JPanel;
+
+import common.l33tGaem.graphics.GaemPanel;
+import common.l33tGaem.reference.Reference;
+
+@SuppressWarnings("serial")
+public class Gaem extends JPanel implements Runnable{
+	
+	
+	private Thread thread;
+	public boolean running = false;
+	
+	public Gaem() {
+		new GaemPanel(Reference.HEIGHT, Reference.WIDTH, Reference.SCALE, this);
+		
+	}
+	
+	public synchronized void start() {
+		thread = new Thread(this);
+		thread.start();
+	}
+	
+	public synchronized void stop() {
+		try{ 
+			thread.join();
+			running = false;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public void run() {
+		
+		
+	}
+	
+	public void update() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new Gaem();
+		
+	}	
+}

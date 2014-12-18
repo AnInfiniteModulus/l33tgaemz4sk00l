@@ -1,0 +1,19 @@
+package common.l33tGaem.init;
+
+import javax.swing.JFrame;
+
+import common.l33tGaem.graphics.GaemPanel;
+import common.l33tGaem.reference.Reference;
+
+public class Gaem {
+	
+	public static void main(String[] args) {
+		JFrame window = new JFrame(Reference.GAME_TITLE);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setContentPane(new GaemPanel());
+		window.setResizable(false);
+		window.pack();
+		window.setVisible(true);
+	}
+	
+}
