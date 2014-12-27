@@ -1,0 +1,5 @@
+package common.l33tGaem.entities;
+
+public class EntityManager {
+
+}

@@ -1,8 +1,0 @@
-package common.l33tGaem.reference;
-
-public class Reference {
-	public final static String GAME_TITLE = "l33tGaem";
-	
-	
-	
-}
