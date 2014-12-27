@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
+import common.l33tGaem.entities.EntityManager;
 import common.l33tGaem.graphics.GaemPanel;
 import common.l33tGaem.reference.Reference;
 
@@ -65,6 +66,7 @@ public class Gaem extends Canvas implements Runnable{
 	}
 	
 	public void tick() {
+		EntityManager.manage();
 		
 	}
 	
@@ -75,10 +77,11 @@ public class Gaem extends Canvas implements Runnable{
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
-		
+		//put render things here
 		g.setColor(Color.cyan);
 		g.fillRect(0, 0, Reference.WIDTH, Reference.HEIGHT);
-		
+		EntityManager.render();
+		//and end here
 		g.dispose();
 		bs.show();
 	}
