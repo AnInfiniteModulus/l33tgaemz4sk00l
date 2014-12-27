@@ -12,8 +12,9 @@ public class Entity {
 	
 	private Image[][] sprites;
 	
-	public Entity() {
-		
+	public Entity(int x, int y) {
+		this.x = x;
+		this.y = y;
 		
 	}
 	
