@@ -1,0 +1,24 @@
+package common.l33tGaem.entities;
+
+import java.awt.Graphics;
+
+import javax.imageio.ImageIO;
+
+/**Class to manage the positions of entities and mapping the textures to their position**/
+public class EntityManager {
+	/**just a test entity... a tentity **/
+	private static Entity entity; 
+	
+	private static boolean test = true;
+
+	public static void manage() {
+		if(test) {
+			Entity entity = new Entity(3, 3);
+		}
+	}
+	
+	public static void render(Graphics g) {
+		//g.drawImage(ImageIO.read(arg0), entity.getX(), entity.getY(), null); //set arg0 to the path of a picture
+	}
+	
+}
