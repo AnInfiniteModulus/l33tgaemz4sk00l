@@ -4,6 +4,9 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import common.l33tGaem.entities.EntityManager;
 import common.l33tGaem.graphics.GaemPanel;
@@ -53,7 +56,12 @@ public class Gaem extends Canvas implements Runnable{
 		delta--;
 		}
 		if(running)
-			render();
+			try {
+				render();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			frames++;
 
 			if(System.currentTimeMillis() - timer > 1000){
@@ -70,7 +78,7 @@ public class Gaem extends Canvas implements Runnable{
 		
 	}
 	
-	public void render() {
+	public void render() throws IOException { //dont need the throws exception
 		BufferStrategy bs = this.getBufferStrategy();
 		if (bs == null) {
 			this.createBufferStrategy(3);
@@ -79,8 +87,9 @@ public class Gaem extends Canvas implements Runnable{
 		Graphics g = bs.getDrawGraphics();
 		//put render things here
 		g.setColor(Color.cyan);
-		g.fillRect(0, 0, Reference.WIDTH, Reference.HEIGHT);
-		EntityManager.render();
+		g.fillRect(0, 0, Reference.HEIGHT, Reference.WIDTH);
+		//EntityManager.render(g);
+		g.drawImage(ImageIO.read(Gaem.class.getResource("abcd.png")), 1, 1, 256, 256, null);
 		//and end here
 		g.dispose();
 		bs.show();

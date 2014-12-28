@@ -10,7 +10,7 @@ public class Entity {
 	public boolean isGrounded;
 	public boolean hasGravity;
 	
-	private Image[][] sprites;
+	private Image[][] sprites; //technically should be a *italics* list *italics* of arrays, List's are arrays that are expandable
 	
 	public Entity(int x, int y) {
 		this.x = x;
