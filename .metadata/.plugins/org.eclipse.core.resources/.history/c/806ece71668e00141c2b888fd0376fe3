@@ -18,13 +18,12 @@ public class EntityManager {
 	public static void manage() {
 		if(test) {
 			Entity entity = new Entity(3, 3);
-			test = false;
 		}
 	}
 	
 	public static void render(Graphics g){
 		try {
-			g.drawImage(ImageIO.read(Gaem.class.getResource("abcd.png")), entity.getX(), entity.getY(), null); //getting null pointer exception
+			g.drawImage(ImageIO.read(Gaem.class.getResource("abcd.png")), entity.getX(), entity.getY(), null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
