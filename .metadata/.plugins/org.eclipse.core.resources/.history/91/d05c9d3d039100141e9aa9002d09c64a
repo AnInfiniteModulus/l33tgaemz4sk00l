@@ -18,11 +18,10 @@ public class Gaem extends Canvas implements Runnable{
 	
 	private Thread thread;
 	public boolean running = false;
-	public static Gaem gaem; //gaem object
 	
 	public Gaem() {
 		new GaemPanel(Reference.HEIGHT, Reference.WIDTH, Reference.SCALE, this);
-		gaem = this;
+		
 	}
 	
 	public synchronized void start() {
@@ -95,10 +94,6 @@ public class Gaem extends Canvas implements Runnable{
 		//and end here
 		g.dispose();
 		bs.show();
-	}
-	
-	public static Gaem getGaem() {
-		return gaem;
 	}
 	
 	public static void main(String[] args) {

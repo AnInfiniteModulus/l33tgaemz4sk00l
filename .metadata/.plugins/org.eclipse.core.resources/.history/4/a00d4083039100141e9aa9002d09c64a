@@ -5,7 +5,7 @@ import java.awt.Image;
 
 public class GraphicsManager {
 	
-	public static Graphics graphics = Gaem.getGaem().
+	public static Graphics graphics;
 	
 	protected GraphicsManager() {
 		

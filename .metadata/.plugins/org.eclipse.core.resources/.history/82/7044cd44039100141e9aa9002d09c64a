@@ -22,7 +22,7 @@ public class Gaem extends Canvas implements Runnable{
 	
 	public Gaem() {
 		new GaemPanel(Reference.HEIGHT, Reference.WIDTH, Reference.SCALE, this);
-		gaem = this;
+		
 	}
 	
 	public synchronized void start() {
@@ -98,7 +98,7 @@ public class Gaem extends Canvas implements Runnable{
 	}
 	
 	public static Gaem getGaem() {
-		return gaem;
+		return
 	}
 	
 	public static void main(String[] args) {
