@@ -18,6 +18,10 @@ public class Entity {
 		
 	}
 	
+	public void render() {
+		 
+	}
+	
 	public Image[] getSprites(short spriteNumber) {
 		return sprites[spriteNumber];
 	}
