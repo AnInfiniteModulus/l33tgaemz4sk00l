@@ -13,10 +13,13 @@ import common.l33tGaem.init.GraphicsManager;
 public class EntityManager {
 	/**just a test entity... a tentity **/
 	private static Entity entity; 
+	
+	private static boolean test = true;
 
 	public static void manage() {
-		if(entity == null) {
+		if(test) {
 			Entity entity = new Entity(3, 3);
+			test = false;
 		}
 	}
 	

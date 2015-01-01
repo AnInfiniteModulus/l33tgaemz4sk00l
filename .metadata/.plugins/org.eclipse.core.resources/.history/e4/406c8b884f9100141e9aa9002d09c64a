@@ -13,17 +13,20 @@ import common.l33tGaem.init.GraphicsManager;
 public class EntityManager {
 	/**just a test entity... a tentity **/
 	private static Entity entity; 
+	
+	private static boolean test = true;
 
 	public static void manage() {
-		if(entity == null) {
+		if(test) {
 			Entity entity = new Entity(3, 3);
+			test = false;
 		}
 	}
 	
 	public static void render(Graphics g){
 			try {
 				//g.drawImage(ImageIO.read(Gaem.class.getResource("abcd.png")), entity.getX(), entity.getY(), null);
-				GraphicsManager.draw(ImageIO.read(Gaem.class.getResource("abcd.png")), 1, 1); //entity throws null pointer, works fine without using entity.getX, etc
+				GraphicsManager.draw(ImageIO.read(Gaem.class.getResource("abcd.png")), entity.getX(), entity.getY());
 			} catch (IOException e) {
 				e.printStackTrace();
 			} 

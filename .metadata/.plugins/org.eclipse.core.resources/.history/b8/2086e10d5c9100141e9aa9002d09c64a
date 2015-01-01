@@ -82,7 +82,7 @@ public class Gaem extends Canvas implements Runnable{
 	public void render() throws IOException { //dont need the throws exception
 		BufferStrategy bs = this.getBufferStrategy();
 		if (bs == null) {
-			this.createBufferStrategy(3);
+			this.createBufferStrategy(2);
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
