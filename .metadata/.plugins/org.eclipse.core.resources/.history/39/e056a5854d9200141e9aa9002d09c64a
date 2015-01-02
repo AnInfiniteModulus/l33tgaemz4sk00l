@@ -15,8 +15,4 @@ public class GraphicsManager {
 	public static void draw(Image img, int x, int y){
 		graphics.drawImage(img, x, y, null);
 	}
-	
-	public static void draw(Image img, int x, int y, int width, int height){
-		graphics.drawImage(img, x, y, width, height, null);
-	}
 }

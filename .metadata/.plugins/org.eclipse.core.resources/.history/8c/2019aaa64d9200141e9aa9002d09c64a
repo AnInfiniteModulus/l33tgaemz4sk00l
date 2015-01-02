@@ -87,7 +87,7 @@ public class Gaem extends Canvas implements Runnable{
 		}
 		Graphics g = bs.getDrawGraphics();
 		//put render things here
-		g.setColor(Color.black);
+		g.setColor(Color.white);
 		g.fillRect(0, 0, Reference.HEIGHT, Reference.WIDTH);
 		EntityManager.render(g);
 		//g.drawImage(ImageIO.read(Gaem.class.getResource("abcd.png")), 1, 1, 256 * 3 / 2, 256 * 3 / 2, null);
