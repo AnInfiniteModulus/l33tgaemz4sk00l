@@ -41,7 +41,7 @@ public class Gaem extends Canvas implements Runnable{
 	}
 	
 	@Override
-	public void run() { //borrowed a ticking system for the game because 1: I have ADD and I couldn't be expected to type it all out and 2: I wa
+	public void run() { //Ticking system
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60;
 		double ns = 1000000000 / amountOfTicks;
